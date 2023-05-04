@@ -63,6 +63,29 @@ export class GameMap extends Container {
                     leftCell.filterPossibilities(this.rules[currentcell.textureType]);
                 }
 
+                const topRightCorner = this.children[(x - 1) * GameMap.dimensions + y + 1] as Cell;
+
+                if (topRightCorner) {
+                    topRightCorner.filterPossibilities(this.rules[currentcell.textureType]);
+                }
+
+                const bottomRightCorner = this.children[(x + 1) * GameMap.dimensions + y + 1] as Cell;
+
+                if (bottomRightCorner) {
+                    bottomRightCorner.filterPossibilities(this.rules[currentcell.textureType]);
+                }
+
+                const bottomLeftCorner = this.children[(x + 1) * GameMap.dimensions + y - 1] as Cell;
+
+                if (bottomLeftCorner) {
+                    bottomLeftCorner.filterPossibilities(this.rules[currentcell.textureType]);
+                }
+
+                const topLeftCorner = this.children[(x - 1) * GameMap.dimensions + y - 1] as Cell;
+
+                if (topLeftCorner) {
+                    topLeftCorner.filterPossibilities(this.rules[currentcell.textureType]);
+                }
             }
         }
     }

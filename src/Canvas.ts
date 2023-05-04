@@ -1,5 +1,6 @@
 import { Application, Assets, Sprite } from "pixi.js";
 import { GameMap } from "./GameMap";
+import { PerlinMap } from "./PerlinMap";
 
 export async function setupCanvas(element: HTMLCanvasElement, wrapper: HTMLDivElement) {
   // The application will create a renderer using WebGL, if possible,
@@ -17,7 +18,7 @@ export async function setupCanvas(element: HTMLCanvasElement, wrapper: HTMLDivEl
   //@ts-ignore
   document.body.appendChild(app.view);
 
-  const map = new GameMap();
+  const map = new PerlinMap();
   app.stage.addChild(map);
 
   // Listen for frame updates
