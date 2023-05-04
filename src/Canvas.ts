@@ -14,6 +14,7 @@ export async function setupCanvas(element: HTMLCanvasElement, wrapper: HTMLDivEl
 
   // The application will create a canvas element for you that you
   // can then insert into the DOM
+  //@ts-ignore
   document.body.appendChild(app.view);
 
   const map = new GameMap();

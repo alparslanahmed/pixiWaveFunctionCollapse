@@ -23,7 +23,8 @@ export class Cell extends Container {
 
         this.collapsed = true;
         const randomTexture = this.possibilites[Math.floor(Math.random() * this.possibilites.length)];
-        this.children[0].texture = Texture.from(`${randomTexture}.png`);
+        const child = this.children[0] as Tile;
+        child.texture = Texture.from(`${randomTexture}.png`);
         this.textureType = randomTexture;
     }
 
