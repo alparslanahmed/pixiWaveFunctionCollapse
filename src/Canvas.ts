@@ -18,7 +18,7 @@ export async function setupCanvas(element: HTMLCanvasElement, wrapper: HTMLDivEl
   //@ts-ignore
   document.body.appendChild(app.view);
 
-  const map = new PerlinMap();
+  const map = new GameMap();
   app.stage.addChild(map);
 
   // Listen for frame updates
